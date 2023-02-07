@@ -7,7 +7,7 @@ export default function About() {
         <div>
             <div>{userId || 'guest'}</div>
             <SignedIn>
-                <Link href="/" prefetch={false}>Homepage</Link>
+                <Link href="/" prefetch={true}>Homepage</Link>
             </SignedIn>
             <SignedOut>
                 <SignIn />
