@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "4.6.13",
+    "@clerk/nextjs": "4.9.0",
     "@next/font": "13.0.8-canary.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
