@@ -1,11 +1,17 @@
-import { auth, SignIn } from '@clerk/nextjs/app-beta';
+import { auth, SignedIn, SignedOut, SignIn } from '@clerk/nextjs/app-beta';
+import Link from 'next/link';
 
 export default function About() {
   const { userId } = auth();
     return (
         <div>
             <div>{userId || 'guest'}</div>
-            <SignIn></SignIn>
+            <SignedIn>
+                <Link href="/" prefetch={false}>Homepage</Link>
+            </SignedIn>
+            <SignedOut>
+                <SignIn />
+            </SignedOut>
         </div>
     )
 }
