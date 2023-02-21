@@ -1,4 +1,4 @@
-import { auth, SignedIn, SignedOut, SignIn } from '@clerk/nextjs/app-beta';
+import { auth, SignedIn, SignedOut, SignIn, UserProfile } from '@clerk/nextjs/app-beta';
 import Link from 'next/link';
 
 export default function About() {
@@ -12,6 +12,7 @@ export default function About() {
             <SignedOut>
                 <SignIn />
             </SignedOut>
+            <UserProfile />
         </div>
     )
 }

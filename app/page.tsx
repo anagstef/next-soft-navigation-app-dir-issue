@@ -2,6 +2,9 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from './page.module.css'
 import Header from './components/Header'
+import { SignedIn } from '@clerk/nextjs/app-beta'
+import Link from 'next/link'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -10,6 +13,9 @@ export default function Home() {
     <main className={styles.main}>
       <Header page="index" />
       <div className={styles.description}>
+        <SignedIn>
+            <Link href="/about" prefetch={true}>About</Link>
+        </SignedIn>
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>app/page.tsx</code>
